@@ -10,3 +10,19 @@ class Musica {
         return titulo + " - " + artista;
     }
 }
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+Musica m = new Musica("Song1","A");
+
+lista.adiciona(m);
+lista.adiciona(new Musica("Song2","B"));
+lista.adiciona(new Musica("Song3","C"));
+lista.adiciona(new Musica("Song4","D"));
+lista.adiciona(new Musica("Song5","E"));
+lista.adiciona(new Musica("Song6","F"));
+
+System.out.println(lista);
+System.out.println(lista.contem(m));
+System.out.println(lista.getTamanho());
