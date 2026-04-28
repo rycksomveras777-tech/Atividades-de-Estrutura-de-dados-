@@ -1,1 +1,30 @@
+class Aluno {
+    String nome;
+    String matricula;
 
+    Aluno(String n, String m) {
+        nome = n;
+        matricula = m;
+    }
+
+    public String toString() {
+        return nome + " - " + matricula;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ListaEncadeada lista = new ListaEncadeada();
+
+        lista.adiciona(new Aluno("Ana","1"));
+        lista.adiciona(new Aluno("Bruno","2"));
+        lista.adiciona(new Aluno("Carlos","3"));
+        lista.adiciona(new Aluno("Davi","4"));
+        lista.adiciona(new Aluno("Eva","5"));
+
+        System.out.println(lista);
+        System.out.println("Primeiro: " + lista.pegaPrimeiro());
+        System.out.println("Último: " + lista.pegaUltimo());
+        System.out.println("Total: " + lista.getTamanho());
+    }
+}
