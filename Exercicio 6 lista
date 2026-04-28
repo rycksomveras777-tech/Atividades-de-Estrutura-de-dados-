@@ -1,0 +1,29 @@
+class Convidado {
+    String nome, cpf;
+
+    Convidado(String n, String c) {
+        nome = n;
+        cpf = c;
+    }
+
+    public String toString() {
+        return nome + " - " + cpf;
+    }
+}
+
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+Convidado c = new Convidado("Ana","111");
+
+lista.adiciona(c);
+lista.adiciona(new Convidado("B","222"));
+lista.adiciona(new Convidado("C","333"));
+lista.adiciona(new Convidado("D","444"));
+lista.adiciona(new Convidado("E","555"));
+lista.adiciona(new Convidado("F","666"));
+
+System.out.println(lista);
+System.out.println(lista.contem(c));
+System.out.println(lista.getTamanho());
