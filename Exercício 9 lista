@@ -1,0 +1,26 @@
+class Nota {
+    String disciplina;
+    double nota;
+
+    Nota(String d, double n) {
+        disciplina = d;
+        nota = n;
+    }
+
+    public String toString() {
+        return disciplina + " - " + nota;
+    }
+}
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+lista.adiciona(new Nota("Mat",8));
+lista.adiciona(new Nota("Port",7));
+lista.adiciona(new Nota("Bio",9));
+lista.adiciona(new Nota("Hist",6));
+lista.adiciona(new Nota("Geo",8));
+
+System.out.println(lista);
+System.out.println(lista.pega(1));
+System.out.println(lista.getTamanho());
