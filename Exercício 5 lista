@@ -1,0 +1,30 @@
+class Pagina {
+    String titulo, url;
+
+    Pagina(String t, String u) {
+        titulo = t;
+        url = u;
+    }
+
+    public String toString() {
+        return titulo + " - " + url;
+    }
+}
+
+ListaEncadeada lista = new ListaEncadeada();
+
+Pagina p = new Pagina("Google","google.com");
+
+lista.adiciona(p);
+lista.adiciona(new Pagina("YouTube","yt.com"));
+lista.adiciona(new Pagina("X","x.com"));
+lista.adiciona(new Pagina("Insta","insta.com"));
+lista.adiciona(new Pagina("Wiki","wiki.org"));
+lista.adiciona(new Pagina("Reddit","reddit.com"));
+lista.adiciona(new Pagina("Amazon","amazon.com"));
+lista.adiciona(new Pagina("Netflix","netflix.com"));
+
+System.out.println(lista);
+System.out.println(lista.contem(p));
+System.out.println(lista.pegaUltimo());
+System.out.println(lista.getTamanho());
