@@ -1,0 +1,16 @@
+public class Main {
+
+    static int maior(int[] v, int i) {
+        if (i == v.length-1) return v[i];
+
+        int m = maior(v, i+1);
+
+        if (v[i] > m) return v[i];
+        return m;
+    }
+
+    public static void main(String[] args) {
+        int[] v = {3,9,2,15,7};
+        System.out.println(maior(v,0));
+    }
+}
