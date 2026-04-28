@@ -1,0 +1,29 @@
+class Produto {
+    String nome;
+    double preco;
+    int qtd;
+
+    Produto(String n, double p, int q) {
+        nome = n;
+        preco = p;
+        qtd = q;
+    }
+
+    public String toString() {
+        return nome + " - " + preco + " - " + qtd;
+    }
+}
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+lista.adiciona(new Produto("A",10,5));
+lista.adiciona(new Produto("B",20,2));
+lista.adiciona(new Produto("C",30,3));
+lista.adiciona(new Produto("D",40,1));
+lista.adiciona(new Produto("E",50,6));
+
+System.out.println(lista);
+System.out.println(lista.pega(2));
+System.out.println(lista.pegaPrimeiro());
+System.out.println(lista.pegaUltimo());
