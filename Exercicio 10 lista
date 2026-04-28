@@ -1,0 +1,29 @@
+class Carro {
+    String placa, modelo;
+
+    Carro(String p, String m) {
+        placa = p;
+        modelo = m;
+    }
+
+    public String toString() {
+        return placa + " - " + modelo;
+    }
+}
+
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+Carro c = new Carro("ABC","Gol");
+
+lista.adiciona(c);
+lista.adiciona(new Carro("DEF","Uno"));
+lista.adiciona(new Carro("GHI","HB20"));
+lista.adiciona(new Carro("JKL","Onix"));
+lista.adiciona(new Carro("MNO","Civic"));
+
+System.out.println(lista);
+System.out.println(lista.contem(c));
+System.out.println(lista.pegaPrimeiro());
+System.out.println(lista.pegaUltimo());
