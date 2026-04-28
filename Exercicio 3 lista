@@ -1,0 +1,29 @@
+class Item {
+    String nome;
+    int qtd;
+
+    Item(String n, int q) {
+        nome = n;
+        qtd = q;
+    }
+
+    public String toString() {
+        return nome + " - " + qtd;
+    }
+}
+
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+lista.adiciona(new Item("Arroz",2));
+lista.adiciona(new Item("Feijão",1));
+lista.adiciona(new Item("Leite",3));
+lista.adiciona(new Item("Pão",5));
+lista.adiciona(new Item("Carne",2));
+lista.adiciona(new Item("Ovo",12));
+lista.adiciona(new Item("Café",1));
+
+System.out.println(lista);
+System.out.println(lista.pega(2));
+System.out.println(lista.getTamanho());
