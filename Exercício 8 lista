@@ -1,0 +1,29 @@
+class Contato {
+    String nome, tel;
+
+    Contato(String n, String t) {
+        nome = n;
+        tel = t;
+    }
+
+    public String toString() {
+        return nome + " - " + tel;
+    }
+}
+
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+Contato c = new Contato("Ana","999");
+
+lista.adiciona(c);
+lista.adiciona(new Contato("B","888"));
+lista.adiciona(new Contato("C","777"));
+lista.adiciona(new Contato("D","666"));
+lista.adiciona(new Contato("E","555"));
+lista.adiciona(new Contato("F","444"));
+
+System.out.println(lista);
+System.out.println(lista.contem(c));
+System.out.println(lista.getTamanho());
