@@ -1,0 +1,28 @@
+class Livro {
+    String titulo, autor;
+    int ano;
+
+    Livro(String t, String a, int ano) {
+        titulo = t;
+        autor = a;
+        this.ano = ano;
+    }
+
+    public String toString() {
+        return titulo + " - " + autor + " - " + ano;
+    }
+}
+
+
+
+ListaEncadeada lista = new ListaEncadeada();
+
+lista.adiciona(new Livro("A","X",2000));
+lista.adiciona(new Livro("B","Y",2001));
+lista.adiciona(new Livro("C","Z",2002));
+lista.adiciona(new Livro("D","W",2003));
+lista.adiciona(new Livro("E","K",2004));
+
+System.out.println(lista);
+System.out.println(lista.pegaPrimeiro());
+System.out.println(lista.pegaUltimo());
